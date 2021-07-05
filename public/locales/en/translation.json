@@ -14,9 +14,9 @@
     "E-mail": "E- mail*",
     "City": "City*",
     "Address": "Address*",
-    "First Name1": "First Name1",
-    "Last Name1": "Last Name1",
-    "E-mail1":  "E-mail1",
+    "First Name1": "First Name",
+    "Last Name1": "Last Name",
+    "E-mail1": "E-mail",
     "Submit": "Submit",
     "Remember me": "Remember me",
     "Don't have account? Register now!": "Don't have account? Register now!",
@@ -36,7 +36,9 @@
     "required address": "Please write an address",
     "required email": "Please write an e-mail",
     "increase": "Increase",
-    "decrease": "Decrease",
-    "Sign In": "Sign In",
-    "Sign Up": "Sign Up"
+    "decrease": "Decrease"
+    
+
+
 }
+  

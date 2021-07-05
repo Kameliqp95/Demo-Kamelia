@@ -1,4 +1,6 @@
-import { makeStyles, createStyles, Theme, createMuiTheme } from '@material-ui/core/styles';
+import React from 'react'
+import { useFormik } from 'formik'
+import { makeStyles, createStyles, Theme, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Avatar, TextField } from '@material-ui/core';
@@ -53,7 +55,7 @@ function ProfileView() {
                         alignItems="center">
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs >
-                                <span className="font-size">{t("My Picture")}</span>
+                             <span className="font-size">{t("My Picture")}</span>
                                 <Grid item xs={9} sm container direction="row"
                                     justify="center"
                                     alignItems="center">
@@ -63,7 +65,7 @@ function ProfileView() {
                                         <Grid container justify="center" alignItems="center">
                                             <Avatar alt="Ivan Petkov" src="https://lh3.googleusercontent.com/proxy/ON_6Wl5OOBIgjpY16q34DIsPt43kJjJH04y6ballrv1SKUPIO4LYOdbdq4Aio5GRUEt27Nt1uHOH7SmTObg0iB70l6utsENdJHz5uk9w0dORwA" className={classes.bigAvatar} />
                                         </Grid>
-                                        <NavLink className="actions" to='#'><Edit className={classes.icon} /></NavLink>
+                                        <NavLink className="actions" to='#'><Edit className={classes.icon} /></NavLink> 
                                         <NavLink className="actions" to='#'><Delete className={classes.icon} /></NavLink>
                                     </Grid>
                                 </Grid>
@@ -77,7 +79,7 @@ function ProfileView() {
                         alignItems="center">
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs >
-                                <span className="font-size">{t("Personal information")}</span>
+                            <span className="font-size">{t("Personal information")}</span>
                                 <Grid item xs={9} sm container direction="row"
                                     justify="center"
                                     alignItems="center">
@@ -166,3 +168,7 @@ function ProfileView() {
 }
 
 export default ProfileView
+
+function useStyles() {
+    throw new Error('Function not implemented.');
+}

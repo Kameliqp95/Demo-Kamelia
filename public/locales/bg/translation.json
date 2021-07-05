@@ -27,13 +27,6 @@
     "Send": "Изпрати",
     "Cancel": "Затвори",
     "Nickname": "Псевдоним",
-<<<<<<< HEAD
-    "Edit/Delete": "Промени/Изтрии"
-    
-
-    
-  }
-=======
     "Edit/Delete": "Промени/Изтрии",
     "required username": "Моля въведете потребителско име",
     "required password": "Моля въведете парола",
@@ -43,8 +36,6 @@
     "required address": "Моля въведете адрес",
     "required email": "Моля въведете електронна поща",
     "increase": "Увеличи",
-    "decrease": "Намали",
-    "Sign In": "Вписване",
-    "Sign Up": "Регистрация"
-}
->>>>>>> fe73e3be52a48c55db9dec2d20d9e87fa884fc1e
+    "decrease": "Намали"
+    
+  }

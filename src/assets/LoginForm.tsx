@@ -1,8 +1,10 @@
+import React from 'react'
 import { useFormik } from 'formik'
-import { Button, Checkbox, createMuiTheme, Link, makeStyles, TextField } from '@material-ui/core'
+import { Button, Checkbox, createMuiTheme, Grid, Input, Link, makeStyles, TextField, ThemeProvider } from '@material-ui/core'
+import { CenterFocusWeakTwoTone } from '@material-ui/icons';
 import { useTranslation } from 'react-i18next';
-import LockIcon from '@material-ui/icons/Lock';
 import '../App.css';
+import LockIcon from '@material-ui/icons/Lock';
 const initialValues = {
   username: '',
   password: '',
@@ -24,17 +26,17 @@ const useStyles = makeStyles({
   },
 });
 function LoginForm() {
-  const onSubmit = (values: any) => { console.log('formData', values) }
-  const validate = (values: { username: string; password: string }) => {
-    let errors: any = {}
-    if (!values.username) {
-      errors.username = <h5>{t('required username')}</h5>
-    }
-    if (!values.password) {
-      errors.password = <h5>{t('required password')}</h5>
-    }
-    return errors
+const onSubmit = (values: any) => { console.log('formData', values) }
+const validate = (values: { username: string; password: string }) => { 
+  let errors: any = {}
+  if (!values.username) {
+    errors.username = <h5>{t('required username')}</h5>
   }
+  if (!values.password) {
+    errors.password = <h5>{t('required password')}</h5>
+  }
+  return errors
+}
 
   const { t, i18n } = useTranslation();
   const formik = useFormik({
@@ -47,13 +49,15 @@ function LoginForm() {
   const classes = useStyles();
 
   const styles = (theme: { spacing: { unit: any; }; }) => ({
+    button: {
+      margin: theme.spacing.unit,
+    },
     input: {
       display: 'none',
     }
   });
 
   return (
-
     <div className="form-style-3">
       <LockIcon className="sign_in_lock" />
       <span className="sign_in" >{t("Sign In")}</span>
@@ -98,7 +102,6 @@ function LoginForm() {
               inputProps={{ 'aria-label': 'primary checkbox' }}
             />
             <label htmlFor='remember'>{t("Remember me")}</label>
-
           </div>
 
           <Button type="submit" className="buttons_size" variant="contained" color="primary" >

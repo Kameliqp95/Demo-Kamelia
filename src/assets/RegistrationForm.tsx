@@ -1,5 +1,6 @@
+import React from 'react'
 import { useFormik } from 'formik'
-import { Button, createMuiTheme, TextField } from '@material-ui/core'
+import { Button, createMuiTheme, FormControl, Input, InputLabel, TextField, ThemeProvider } from '@material-ui/core'
 import { useTranslation } from 'react-i18next';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 function RegistrationForm() {
@@ -51,7 +52,7 @@ function RegistrationForm() {
   console.log('formValues', formik.values)
   console.log('formErrors', formik.errors)
   return (
-    <div className="form-style-3">
+<div className="form-style-3">
       <AddCircleOutlineIcon className="sign_in_lock" />
       <span className="sign_in" >{t("Sign Up")}</span>
       <form className="up" onSubmit={formik.handleSubmit}>

@@ -66,7 +66,6 @@ function CommentsView() {
   const classes = useStyles();
   return (
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
       <div className={classes.paper}>
 
         <form className={classes.form} noValidate>

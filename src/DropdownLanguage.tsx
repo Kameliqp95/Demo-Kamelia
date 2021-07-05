@@ -1,3 +1,4 @@
+import { MenuItem, Select } from "@material-ui/core";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,10 +13,16 @@ const DropdownLanguage = () => {
   };
 
   return (
-    <select onChange={handleLangChange} value={language}>
-      <option value="bg">BG</option>
-      <option value="en">EN</option>
-    </select>
+    <>
+    <Select
+    value={language}
+    onChange={handleLangChange}
+  >
+    <MenuItem value='bg'>BG</MenuItem>
+    <MenuItem value='en'>EN</MenuItem>
+  </Select>
+  </>
+
   );
 };
 
