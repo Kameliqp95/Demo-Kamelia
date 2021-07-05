@@ -1,0 +1,50 @@
+{
+    "Welcome to React": "Добре дошли!",
+    "Home": "Начало",
+    "Register": "Регистрация",
+    "Login": "Логин",
+    "My profile": "Профил",
+    "Comments": "Коментари",
+    "Table": "Таблица",
+    "Maps": "Карта",
+    "Username": "Потребителско име*",
+    "Password": "Парола*",
+    "First Name": "Име*",
+    "Last Name": "Фамилия*",
+    "E-mail": "Електронна поща*",
+    "City": "Град*",
+    "Address": "Адрес*",
+    "First Name1": "Име",
+    "Last Name1": "Фамилия",
+    "E-mail1": "Електронна поща",
+    "Submit": "Потвърди",
+    "Remember me": "Запомни ме",
+    "Don't have account? Register now!": "Нямате профил? Регистрирайте се сега!",
+    "Personal information": "Лична информация",
+    "My Picture": "Профилна снимка",
+    "Name": "Име",
+    "Add Comments": "Добави коментар",
+    "Send": "Изпрати",
+    "Cancel": "Затвори",
+    "Nickname": "Псевдоним",
+<<<<<<< HEAD
+    "Edit/Delete": "Промени/Изтрии"
+    
+
+    
+  }
+=======
+    "Edit/Delete": "Промени/Изтрии",
+    "required username": "Моля въведете потребителско име",
+    "required password": "Моля въведете парола",
+    "required firstname": "Моля въведете име",
+    "required lastname": "Моля въведете фамилия",
+    "required city": "Моля въведете град",
+    "required address": "Моля въведете адрес",
+    "required email": "Моля въведете електронна поща",
+    "increase": "Увеличи",
+    "decrease": "Намали",
+    "Sign In": "Вписване",
+    "Sign Up": "Регистрация"
+}
+>>>>>>> fe73e3be52a48c55db9dec2d20d9e87fa884fc1e
