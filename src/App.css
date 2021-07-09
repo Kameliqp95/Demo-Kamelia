@@ -128,3 +128,11 @@ background-size: cover;
 .MuiSelect-icon {
   color: rgba(255, 255, 255, 1) !important;
 }
+
+.language_pos {
+  margin-left: 15px;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 0px solid #3f51b5 !important;
+}

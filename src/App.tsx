@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import logo from './logo.svg';
+import './index.css';
 import './App.css';
 import PropTypes from 'prop-types';
 import LoginForm from './assets/LoginForm';

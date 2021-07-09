@@ -1,6 +1,6 @@
 import React from 'react'
 import { useFormik } from 'formik'
-import { Button, Checkbox, createMuiTheme, Grid, Input, Link, makeStyles, TextField, ThemeProvider } from '@material-ui/core'
+import { Button, Checkbox, createMuiTheme, Grid, Input, Link, makeStyles, TextField, ThemeProvider, Tooltip } from '@material-ui/core'
 import { CenterFocusWeakTwoTone } from '@material-ui/icons';
 import { useTranslation } from 'react-i18next';
 import '../App.css';
@@ -59,7 +59,9 @@ const validate = (values: { username: string; password: string }) => {
 
   return (
     <div className="form-style-3">
-      <LockIcon className="sign_in_lock" />
+      <Tooltip title="Login" >
+        <LockIcon className="sign_in_lock" />
+      </Tooltip>
       <span className="sign_in" >{t("Sign In")}</span>
       <form onSubmit={formik.handleSubmit} autoComplete="off">
         <div className='form-control up'>

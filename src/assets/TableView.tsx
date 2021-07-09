@@ -11,7 +11,7 @@ import Edit from '@material-ui/icons/Edit';
 import { Delete, Link } from '@material-ui/icons';
 import { useTranslation } from 'react-i18next';
 import { preventDefault } from 'ol/events/Event';
-import { Typography } from '@material-ui/core';
+import { Tooltip, Typography } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import RoomIcon from '@material-ui/icons/Room';
 
@@ -45,34 +45,34 @@ function createData(firstname: string, lastname: string, email: string, comment:
 const rows = [
   createData('Kamelia', 'Pavlova', 'kamelip@abv.bg', 'comment', 'nickname',
     <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
     </>
   ),
   createData('Evgeni', 'Ivanov', 'eivanov@abv.bg', 'comment1', 'nickname1',
     <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
     </>),
   createData('Georgi', 'Georgiev', 'ggeorgiev@gmail.com', 'comment2', 'nickname2',
     <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
     </>),
   createData('Teodor', 'Todorov', 'ttodorov@gmail.com', 'comment3', 'nickname3',
     <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
     </>),
   createData('Maria', 'Georgieva', 'mgeorgieva.abv.bg', 'comment4', 'nickname4',
     <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
+      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
     </>),
 ];
 

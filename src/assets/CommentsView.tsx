@@ -15,6 +15,7 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import { useTranslation } from 'react-i18next';
+import { Tooltip } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,10 +55,10 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     width: 50,
     height: 50,
-},
-width: {
-  width: '300px',
-},
+  },
+  width: {
+    width: '300px',
+  },
 }));
 
 
@@ -75,7 +76,7 @@ function CommentsView() {
           <div className={classes.name}>
             <Grid container spacing={1} alignItems="flex-end">
               <Grid item>
-              <Avatar alt="Ivan Petkov" src="https://lh3.googleusercontent.com/proxy/ON_6Wl5OOBIgjpY16q34DIsPt43kJjJH04y6ballrv1SKUPIO4LYOdbdq4Aio5GRUEt27Nt1uHOH7SmTObg0iB70l6utsENdJHz5uk9w0dORwA" className={classes.bigAvatar} />
+                <Avatar alt="Ivan Petkov" src="https://lh3.googleusercontent.com/proxy/ON_6Wl5OOBIgjpY16q34DIsPt43kJjJH04y6ballrv1SKUPIO4LYOdbdq4Aio5GRUEt27Nt1uHOH7SmTObg0iB70l6utsENdJHz5uk9w0dORwA" className={classes.bigAvatar} />
               </Grid>
               <Grid item>
                 <TextField id="input-with-icon-grid" label={t("Name")} />
@@ -83,8 +84,12 @@ function CommentsView() {
             </Grid>
           </div>
           <div className={classes.icons}>
-            <BottomNavigationAction className={classes.icons_style} label="Recents" value="recents" icon={<RestoreIcon fontSize="small" />} />
-            <BottomNavigationAction className={classes.icons_style} label="Favorites" value="favorites" icon={<FavoriteIcon fontSize="small" />} />
+            <Tooltip title="Recents" >
+              <BottomNavigationAction className={classes.icons_style} label="Recents" value="recents" icon={<RestoreIcon fontSize="small" />} />
+            </Tooltip>
+            <Tooltip title="Favorites" >
+              <BottomNavigationAction className={classes.icons_style} label="Favorites" value="favorites" icon={<FavoriteIcon fontSize="small" />} />
+            </Tooltip>
           </div>
           <div className={classes.multiline}>
             <TextField
@@ -97,11 +102,11 @@ function CommentsView() {
             />
           </div>
           <Grid container>
-          <Button variant="contained" color="primary" type="submit" className={classes.submit}>
-          {t("Send")}
+            <Button variant="contained" color="primary" type="submit" className={classes.submit}>
+              {t("Send")}
             </Button>
-          <Button variant="contained" color="secondary" className={classes.cancel}>
-          {t("Cancel")}
+            <Button variant="contained" color="secondary" className={classes.cancel}>
+              {t("Cancel")}
             </Button>
 
 

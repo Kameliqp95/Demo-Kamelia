@@ -52,10 +52,10 @@ const { t, i18n } = useTranslation();
     return (
         <>
             <IconButton onClick={() => resize("decrease")} className={classes.size_buttons} aria-label="decrease" size="small">
-                <ArrowDownwardIcon fontSize="inherit" />
+                A+
             </IconButton>
             <IconButton onClick={() => resize("increase")} className={classes.size_buttons} aria-label="increase" size="small">
-                <ArrowUpwardIcon fontSize="inherit" />
+                A-
             </IconButton>
         </>
     )
