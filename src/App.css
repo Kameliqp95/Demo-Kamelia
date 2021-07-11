@@ -105,11 +105,11 @@ background-size: cover;
 }
 
 .font-size {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .sign_in {
-  font-size: 26px;
+  font-size: 1.5rem;
   color: #3f51b5;
 }
 
@@ -121,3 +121,18 @@ background-size: cover;
   margin-top: 20px;
 }
 
+.MuiInputBase-root {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.MuiSelect-icon {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.language_pos {
+  margin-left: 15px;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 0px solid #3f51b5 !important;
+}

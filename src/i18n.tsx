@@ -12,7 +12,7 @@ i18n
       escapeValue: false
     },
     react: { 
-      useSuspense: false //   <---- this will do the magic
+      useSuspense: false
     }
   });
 

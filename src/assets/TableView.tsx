@@ -1,3 +1,4 @@
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -7,8 +8,10 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Edit from '@material-ui/icons/Edit';
-import { Delete} from '@material-ui/icons';
+import { Delete, Link } from '@material-ui/icons';
 import { useTranslation } from 'react-i18next';
+import { preventDefault } from 'ol/events/Event';
+import { Tooltip, Typography } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import RoomIcon from '@material-ui/icons/Room';
 
@@ -39,43 +42,42 @@ function createData(firstname: string, lastname: string, email: string, comment:
   return { firstname, lastname, email, comment, nickname, action };
 }
 
-const rows = [
-  createData('Kamelia', 'Pavlova', 'kamelip@abv.bg', 'comment', 'nickname',
-    <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
-    </>
-  ),
-  createData('Evgeni', 'Ivanov', 'eivanov@abv.bg', 'comment1', 'nickname1',
-    <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
-    </>),
-  createData('Georgi', 'Georgiev', 'ggeorgiev@gmail.com', 'comment2', 'nickname2',
-    <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
-    </>),
-  createData('Teodor', 'Todorov', 'ttodorov@gmail.com', 'comment3', 'nickname3',
-    <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
-    </>),
-  createData('Maria', 'Georgieva', 'mgeorgieva.abv.bg', 'comment4', 'nickname4',
-    <>
-      <NavLink className="actions" to='#'><Edit /></NavLink>
-      <NavLink className="actions" to='#'><Delete /></NavLink>
-      <NavLink className="actions" to='#'><RoomIcon /></NavLink>
-    </>),
-];
-
 export default function TableView() {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
+  const rows = [
+    createData('Kamelia', 'Pavlova', 'kamelip@abv.bg', 'comment', 'nickname',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>
+    ),
+    createData('Evgeni', 'Ivanov', 'eivanov@abv.bg', 'comment1', 'nickname1',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+    createData('Georgi', 'Georgiev', 'ggeorgiev@gmail.com', 'comment2', 'nickname2',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+    createData('Teodor', 'Todorov', 'ttodorov@gmail.com', 'comment3', 'nickname3',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+    createData('Maria', 'Georgieva', 'mgeorgieva.abv.bg', 'comment4', 'nickname4',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+  ];
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -107,3 +109,5 @@ export default function TableView() {
     </TableContainer>
   );
 }
+
+

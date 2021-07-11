@@ -1,5 +1,6 @@
+import React from 'react'
 import { useFormik } from 'formik'
-import { Button, createMuiTheme, TextField } from '@material-ui/core'
+import { Button, createMuiTheme, FormControl, Input, InputLabel, TextField, ThemeProvider, Tooltip } from '@material-ui/core'
 import { useTranslation } from 'react-i18next';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 function RegistrationForm() {
@@ -51,8 +52,10 @@ function RegistrationForm() {
   console.log('formValues', formik.values)
   console.log('formErrors', formik.errors)
   return (
-    <div className="form-style-3">
-      <AddCircleOutlineIcon className="sign_in_lock" />
+<div className="form-style-3">
+      <Tooltip title={t('Register now')!} >
+        <AddCircleOutlineIcon className="sign_in_lock" />
+      </Tooltip>
       <span className="sign_in" >{t("Sign Up")}</span>
       <form className="up" onSubmit={formik.handleSubmit}>
 
@@ -69,7 +72,7 @@ function RegistrationForm() {
           value={formik.values.username}
         />
         <br />
-        {formik.errors.username ? <div className="errors">{formik.errors.username}</div> : null}
+        {formik.errors.username ? <div className="errors">{<h5>{t('required username')}</h5>}</div> : null}
         <br />
         <TextField
 
@@ -83,7 +86,7 @@ function RegistrationForm() {
           value={formik.values.password}
         />
         <br />
-        {formik.errors.password ? <div className="errors">{formik.errors.password}</div> : null}
+        {formik.errors.password ? <div className="errors">{<h5>{t('required password')}</h5>}</div> : null}
         <br />
         <TextField
 
@@ -97,7 +100,7 @@ function RegistrationForm() {
           value={formik.values.firstName}
         />
         <br />
-        {formik.errors.firstName ? <div className="errors">{formik.errors.firstName}</div> : null}
+        {formik.errors.firstName ? <div className="errors">{<h5>{t('required firstname')}</h5>}</div> : null}
         <br />
         <TextField
 
@@ -111,7 +114,7 @@ function RegistrationForm() {
           value={formik.values.lastName}
         />
         <br />
-        {formik.errors.lastName ? <div className="errors">{formik.errors.lastName}</div> : null}
+        {formik.errors.lastName ? <div className="errors">{<h5>{t('required lastname')}</h5>}</div> : null}
         <br />
 
         <TextField
@@ -126,7 +129,7 @@ function RegistrationForm() {
           value={formik.values.email}
         />
         <br />
-        {formik.errors.email ? <div className="errors">{formik.errors.email}</div> : null}
+        {formik.errors.email ? <div className="errors">{<h5>{t('required email')}</h5>}</div> : null}
         <br />
 
         <TextField
@@ -141,7 +144,7 @@ function RegistrationForm() {
           value={formik.values.city}
         />
         <br />
-        {formik.errors.city ? <div className="errors">{formik.errors.city}</div> : null}
+        {formik.errors.city ? <div className="errors">{<h5>{t('required city')}</h5>}</div> : null}
         <br />
         <TextField
 
@@ -155,7 +158,7 @@ function RegistrationForm() {
           value={formik.values.address}
         />
         <br />
-        {formik.errors.address ? <div className="errors">{formik.errors.address}</div> : null}
+        {formik.errors.address ? <div className="errors">{<h5>{t('required address')}</h5>}</div> : null}
         <br />
 
 

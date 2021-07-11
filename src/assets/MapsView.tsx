@@ -7,8 +7,8 @@ import { Layers } from '@material-ui/icons'
 function MapsView() {
     return (
         <div>
-
-        </div>
+ 
+            </div>
     )
 }
 
