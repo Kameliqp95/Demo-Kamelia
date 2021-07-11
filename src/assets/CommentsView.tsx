@@ -84,10 +84,10 @@ function CommentsView() {
             </Grid>
           </div>
           <div className={classes.icons}>
-            <Tooltip title="Recents" >
+            <Tooltip title= {t('Recents')!}>
               <BottomNavigationAction className={classes.icons_style} label="Recents" value="recents" icon={<RestoreIcon fontSize="small" />} />
             </Tooltip>
-            <Tooltip title="Favorites" >
+            <Tooltip title={t('Favorites')!} >
               <BottomNavigationAction className={classes.icons_style} label="Favorites" value="favorites" icon={<FavoriteIcon fontSize="small" />} />
             </Tooltip>
           </div>

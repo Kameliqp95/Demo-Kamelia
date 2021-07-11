@@ -66,12 +66,12 @@ function ProfileView() {
                                             <Avatar alt="Ivan Petkov" src="https://lh3.googleusercontent.com/proxy/ON_6Wl5OOBIgjpY16q34DIsPt43kJjJH04y6ballrv1SKUPIO4LYOdbdq4Aio5GRUEt27Nt1uHOH7SmTObg0iB70l6utsENdJHz5uk9w0dORwA" className={classes.bigAvatar} />
                                         </Grid>
                                         <NavLink className="actions" to='#'>
-                                            <Tooltip title="Edit profile image" >
+                                            <Tooltip title={t('Edit profile image')!} >
                                                 <Edit className={classes.icon} />
                                             </Tooltip>
                                             </NavLink> 
                                         <NavLink className="actions" to='#'>
-                                            <Tooltip title="Delete profile image" >
+                                            <Tooltip title={t('Delete profile image')!} >
                                                 <Delete className={classes.icon} />
                                             </Tooltip>
                                             </NavLink>

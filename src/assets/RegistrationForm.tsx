@@ -53,7 +53,7 @@ function RegistrationForm() {
   console.log('formErrors', formik.errors)
   return (
 <div className="form-style-3">
-      <Tooltip title="Register now" >
+      <Tooltip title={t('Register now')!} >
         <AddCircleOutlineIcon className="sign_in_lock" />
       </Tooltip>
       <span className="sign_in" >{t("Sign Up")}</span>

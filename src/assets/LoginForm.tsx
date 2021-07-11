@@ -59,7 +59,7 @@ const validate = (values: { username: string; password: string }) => {
 
   return (
     <div className="form-style-3">
-      <Tooltip title="Login" >
+      <Tooltip title={t('Login')!} >
         <LockIcon className="sign_in_lock" />
       </Tooltip>
       <span className="sign_in" >{t("Sign In")}</span>

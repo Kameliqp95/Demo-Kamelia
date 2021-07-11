@@ -42,43 +42,42 @@ function createData(firstname: string, lastname: string, email: string, comment:
   return { firstname, lastname, email, comment, nickname, action };
 }
 
-const rows = [
-  createData('Kamelia', 'Pavlova', 'kamelip@abv.bg', 'comment', 'nickname',
-    <>
-      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
-    </>
-  ),
-  createData('Evgeni', 'Ivanov', 'eivanov@abv.bg', 'comment1', 'nickname1',
-    <>
-      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
-    </>),
-  createData('Georgi', 'Georgiev', 'ggeorgiev@gmail.com', 'comment2', 'nickname2',
-    <>
-      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
-    </>),
-  createData('Teodor', 'Todorov', 'ttodorov@gmail.com', 'comment3', 'nickname3',
-    <>
-      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
-    </>),
-  createData('Maria', 'Georgieva', 'mgeorgieva.abv.bg', 'comment4', 'nickname4',
-    <>
-      <NavLink className="actions" to='#'><Tooltip title="Edit" ><Edit /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Delete" ><Delete /></Tooltip></NavLink>
-      <NavLink className="actions" to='#'><Tooltip title="Map" ><RoomIcon /></Tooltip></NavLink>
-    </>),
-];
-
 export default function TableView() {
   const classes = useStyles();
   const { t, i18n } = useTranslation();
+  const rows = [
+    createData('Kamelia', 'Pavlova', 'kamelip@abv.bg', 'comment', 'nickname',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>
+    ),
+    createData('Evgeni', 'Ivanov', 'eivanov@abv.bg', 'comment1', 'nickname1',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+    createData('Georgi', 'Georgiev', 'ggeorgiev@gmail.com', 'comment2', 'nickname2',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+    createData('Teodor', 'Todorov', 'ttodorov@gmail.com', 'comment3', 'nickname3',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+    createData('Maria', 'Georgieva', 'mgeorgieva.abv.bg', 'comment4', 'nickname4',
+      <>
+        <NavLink className="actions" to='#'><Tooltip title={t('Edit')!} ><Edit /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Delete')!} ><Delete /></Tooltip></NavLink>
+        <NavLink className="actions" to='#'><Tooltip title={t('Map')!} ><RoomIcon /></Tooltip></NavLink>
+      </>),
+  ];
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -110,3 +109,5 @@ export default function TableView() {
     </TableContainer>
   );
 }
+
+

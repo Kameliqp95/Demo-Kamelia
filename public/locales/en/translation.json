@@ -36,7 +36,16 @@
     "required address": "Please write an address",
     "required email": "Please write an e-mail",
     "increase": "Increase",
-    "decrease": "Decrease"
+    "decrease": "Decrease",
+    "Register now": "Register now",
+    "Recents": "Recents",
+    "Favorites": "Favorites",
+    "Edit profile image": "Edit profile image",
+    "Delete profile image": "Delete profile image",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "Map": "Map"
+    
     
 
 

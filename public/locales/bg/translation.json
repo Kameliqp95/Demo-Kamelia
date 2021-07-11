@@ -36,6 +36,15 @@
     "required address": "Моля въведете адрес",
     "required email": "Моля въведете електронна поща",
     "increase": "Увеличи",
-    "decrease": "Намали"
+    "decrease": "Намали",
+    "Register now": "Регистрирай се сега!",
+    "Recents": "Последни",
+    "Favorites": "Любими",
+    "Edit profile image": "Промени профилната снимка",
+    "Delete profile image": "Изтрий профилната снимка",
+    "Edit": "Промени",
+    "Delete": "Изтрий",
+    "Map": "Карта"
+    
     
   }
