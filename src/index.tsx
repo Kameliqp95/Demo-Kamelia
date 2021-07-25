@@ -14,10 +14,7 @@ import i18n from './i18n';
 
 ReactDOM.render(
   <BrowserRouter>
-
-      <App />
-
-
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );

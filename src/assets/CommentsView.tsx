@@ -1,16 +1,9 @@
-import React from 'react'
-import { useFormik } from 'formik'
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
@@ -84,7 +77,7 @@ function CommentsView() {
             </Grid>
           </div>
           <div className={classes.icons}>
-            <Tooltip title= {t('Recents')!}>
+            <Tooltip title={t('Recents')!}>
               <BottomNavigationAction className={classes.icons_style} label="Recents" value="recents" icon={<RestoreIcon fontSize="small" />} />
             </Tooltip>
             <Tooltip title={t('Favorites')!} >

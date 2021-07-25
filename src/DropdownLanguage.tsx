@@ -15,15 +15,15 @@ const DropdownLanguage = () => {
 
   return (
     <>
-    <Select
-    value={language}
-    onChange={handleLangChange}
-    className="language_pos"
-  >
-    <MenuItem value='bg'>BG</MenuItem>
-    <MenuItem value='en'>EN</MenuItem>
-  </Select>
-  </>
+      <Select
+        value={language}
+        onChange={handleLangChange}
+        className="language_pos"
+      >
+        <MenuItem value='bg'>BG</MenuItem>
+        <MenuItem value='en'>EN</MenuItem>
+      </Select>
+    </>
 
   );
 };

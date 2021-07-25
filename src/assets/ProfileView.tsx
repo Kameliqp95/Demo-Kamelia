@@ -1,6 +1,4 @@
-import React from 'react'
-import { useFormik } from 'formik'
-import { makeStyles, createStyles, Theme, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { makeStyles, createStyles, Theme, createMuiTheme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Avatar, TextField, Tooltip } from '@material-ui/core';
@@ -55,7 +53,7 @@ function ProfileView() {
                         alignItems="center">
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs >
-                             <span className="font-size">{t("My Picture")}</span>
+                                <span className="font-size">{t("My Picture")}</span>
                                 <Grid item xs={9} sm container direction="row"
                                     justify="center"
                                     alignItems="center">
@@ -69,12 +67,12 @@ function ProfileView() {
                                             <Tooltip title={t('Edit profile image')!} >
                                                 <Edit className={classes.icon} />
                                             </Tooltip>
-                                            </NavLink> 
+                                        </NavLink>
                                         <NavLink className="actions" to='#'>
                                             <Tooltip title={t('Delete profile image')!} >
                                                 <Delete className={classes.icon} />
                                             </Tooltip>
-                                            </NavLink>
+                                        </NavLink>
                                     </Grid>
                                 </Grid>
 
@@ -87,7 +85,7 @@ function ProfileView() {
                         alignItems="center">
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs >
-                            <span className="font-size">{t("Personal information")}</span>
+                                <span className="font-size">{t("Personal information")}</span>
                                 <Grid item xs={9} sm container direction="row"
                                     justify="center"
                                     alignItems="center">

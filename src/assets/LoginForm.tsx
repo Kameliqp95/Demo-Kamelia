@@ -26,17 +26,17 @@ const useStyles = makeStyles({
   },
 });
 function LoginForm() {
-const onSubmit = (values: any) => { console.log('formData', values) }
-const validate = (values: { username: string; password: string }) => { 
-  let errors: any = {}
-  if (!values.username) {
-    errors.username = <h5>{t('required username')}</h5>
+  const onSubmit = (values: any) => { console.log('formData', values) }
+  const validate = (values: { username: string; password: string }) => {
+    let errors: any = {}
+    if (!values.username) {
+      errors.username = <h5>{t('required username')}</h5>
+    }
+    if (!values.password) {
+      errors.password = <h5>{t('required password')}</h5>
+    }
+    return errors
   }
-  if (!values.password) {
-    errors.password = <h5>{t('required password')}</h5>
-  }
-  return errors
-}
 
   const { t, i18n } = useTranslation();
   const formik = useFormik({
